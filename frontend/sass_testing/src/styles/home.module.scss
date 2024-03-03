@@ -1,7 +1,35 @@
+$primary-color: rgb(28, 132, 118);
+$secondary-color: rgb(15, 9, 9);
+$submit-color: rgb(201, 210, 213);
+$light-text: white;
+$dark-text: black;
+
 .main {
   background-color: rgb(237, 230, 230);
+  padding: 20px;
 
   .title {
     color: rgb(154, 61, 61);
   }
+}
+
+@mixin btn($bgcolor, $txtcolor: $light-text) {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: $bgcolor;
+  margin: 3px;
+  color: $txtcolor;
+}
+
+.btnPrimary {
+  @include btn($bgcolor: $primary-color);
+}
+
+.btnSecondary {
+  @include btn($bgcolor: $secondary-color);
+}
+
+.btnSubmit {
+  @include btn($bgcolor: $submit-color, $txtcolor: $dark-text);
 }
