@@ -22,14 +22,49 @@ $dark-text: black;
   color: $txtcolor;
 }
 
-.btnPrimary {
-  @include btn($bgcolor: $primary-color);
+.btn {
+  @include btn($light-text);
+
+  &Primary {
+    background-color: $primary-color;
+  }
 }
 
-.btnSecondary {
-  @include btn($bgcolor: $secondary-color);
+%bton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
 }
 
 .btnSubmit {
-  @include btn($bgcolor: $submit-color, $txtcolor: $dark-text);
+  @extend %bton;
+  background-color: $submit-color;
+  color: $dark-text;
+}
+
+.btnSecondary {
+  @extend %bton;
+  background-color: $secondary-color;
+  color: $light-text;
+}
+
+// .btnPrimary {
+//   @include btn($bgcolor: $primary-color);
+// }
+
+// .btnSecondary {
+//   @include btn($bgcolor: $secondary-color);
+// }
+
+// .btnSubmit {
+//   @include btn($bgcolor: $submit-color, $txtcolor: $dark-text);
+// }
+
+.btnSuccess__newButton_active {
+  background-color: aliceblue;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
 }
