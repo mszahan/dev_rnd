@@ -1,0 +1,31 @@
+@use "mixins" as mx;
+
+.parent {
+  background-color: rgb(13, 31, 63);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  //   width: 100%;
+
+  .title {
+    text-align: center;
+  }
+
+  .para {
+    width: 70%;
+  }
+
+  .btn {
+    @include mx.bton($bgcolor: white, $txtcolor: black);
+    display: block;
+    margin: 5px auto;
+    font-weight: bold;
+
+    &:hover {
+      color: white;
+      background-color: rgb(13, 31, 63);
+      border: 1px solid white;
+      cursor: pointer;
+    }
+  }
+}
