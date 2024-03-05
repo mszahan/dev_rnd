@@ -15,8 +15,8 @@
     width: 70%;
   }
 
-  .btn {
-    @include mx.bton($bgcolor: white, $txtcolor: black);
+  .bton {
+    @include mx.bton(white, black);
     display: block;
     margin: 5px auto;
     font-weight: bold;

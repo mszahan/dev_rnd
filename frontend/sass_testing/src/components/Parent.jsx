@@ -14,7 +14,7 @@ export default function Parent() {
           doloremque dolore porro? Sed.
         </p>
       )}
-      <button onClick={() => setVisible(!visible)} className={styles.btn}>
+      <button onClick={() => setVisible(!visible)} className={styles.bton}>
         Hide/show
       </button>
     </div>

@@ -1,6 +1,8 @@
-@mixin bton($bgcolor, $txtcolor) {
+@mixin bton($bgc-olor, $txtc-olor) {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
   margin: 3px;
+  background-color: $bgc-olor;
+  color: $txtc-olor;
 }
