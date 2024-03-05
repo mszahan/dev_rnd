@@ -1,32 +1,24 @@
-$primary-color: rgb(28, 132, 118);
-$secondary-color: rgb(15, 9, 9);
-$submit-color: rgb(201, 210, 213);
-$light-text: white;
-$dark-text: black;
+@use "variables" as var;
+@use "base";
 
-.main {
-  background-color: rgb(237, 230, 230);
-  padding: 20px;
-
-  .title {
-    color: rgb(154, 61, 61);
-  }
+:root {
+  --new-color: red;
 }
 
-@mixin btn($bgcolor, $txtcolor: $light-text) {
+@mixin btn($bgcolor, $txtcolor: var.$light-text) {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: $bgcolor;
+  background-color: var.$bgcolor;
   margin: 3px;
   color: $txtcolor;
 }
 
 .btn {
-  @include btn($light-text);
+  @include btn(var.$light-text);
 
   &Primary {
-    background-color: $primary-color;
+    background-color: var.$primary-color;
   }
 }
 
@@ -39,14 +31,15 @@ $dark-text: black;
 
 .btnSubmit {
   @extend %bton;
-  background-color: $submit-color;
-  color: $dark-text;
+  background-color: var.$submit-color;
+  color: var.$dark-text;
+  // color: var(--new-color);
 }
 
 .btnSecondary {
   @extend %bton;
-  background-color: $secondary-color;
-  color: $light-text;
+  background-color: var.$secondary-color;
+  color: var.$light-text;
 }
 
 // .btnPrimary {
